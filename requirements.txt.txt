@@ -1,0 +1,7 @@
+opencv-python
+ultralytics
+smtplib
+face_recognition
+numpy
+Pillow
+pygame
