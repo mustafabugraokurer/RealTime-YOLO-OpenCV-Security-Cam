@@ -65,7 +65,7 @@ Bu çalışmanın temel amacı, YOLO nesne tanıma algoritması ve OpenCV görü
 
 
 ### Yapılandırma / Configuration
-=======
+
 2.  **Gerekli Dosyaları Hazırlayın:**
     * YOLOv8 modelini (`yolov8n.pt`) [buradan](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt) indirin ve projenin ana dizinine kaydedin.
     * Bir alarm sesini `Tehlike Alarm Sesi.mp3` olarak ana dizine ekleyin.
@@ -90,7 +90,7 @@ TO_EMAIL = 'uyari_gonderilecek_adres@gmail.com'
 
 
 ### Çalıştırma / Running
-=======
+
 ### Kamerayı Kendi Kaynağınıza Bağlama
 
 `guvenlik.py` dosyasında kamera görüntüsü `cv2.VideoCapture()` fonksiyonu
