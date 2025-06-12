@@ -56,6 +56,20 @@ EMAIL_PASSWORD = 'UYGULAMA_SIFRENIZ' # Normal şifreniz değil, Google 'Uygulama
 TO_EMAIL = 'uyari_gonderilecek_adres@gmail.com'
 ```
 
+### Kamerayı Kendi Kaynağınıza Bağlama
+
+`guvenlik.py` dosyasında kamera görüntüsü `cv2.VideoCapture()` fonksiyonu
+kullanılarak açılır. Varsayılan olarak yerel bilgisayarınızdaki kamera
+`cv2.VideoCapture(0)` ile seçilmiştir. Kendi IP kameranızın adresini ya da
+farklı bir kamera ID'si kullanmak için bu satırı şu şekilde güncelleyebilirsiniz:
+
+```python
+cap = cv2.VideoCapture("<KAMERA_URL_VEYA_ID>")
+```
+
+Örneğin bir IP kamera için `cv2.VideoCapture("rtsp://<adres>")` ya da ikinci
+USB kamera için `cv2.VideoCapture(1)` yazabilirsiniz.
+
 ### Çalıştırma
 
 ```bash
