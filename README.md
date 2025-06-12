@@ -63,7 +63,22 @@ Bu çalışmanın temel amacı, YOLO nesne tanıma algoritması ve OpenCV görü
    pip install -r requirements.txt
    ```
 
+
 ### Yapılandırma / Configuration
+=======
+2.  **Gerekli Dosyaları Hazırlayın:**
+    * YOLOv8 modelini (`yolov8n.pt`) [buradan](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt) indirin ve projenin ana dizinine kaydedin.
+    * Bir alarm sesini `Tehlike Alarm Sesi.mp3` olarak ana dizine ekleyin.
+    * Tanınmasını istediğiniz kişilerin fotoğraflarını (`isim.jpg` formatında) `known_faces` adında bir klasör oluşturup içine ekleyin.
+
+3.  **Gerekli Kütüphaneleri Yükleyin:** Projenin kök dizinindeki
+   `requirements.txt` dosyasında listelenen bağımlılıkları yüklemek için:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+
+
 
 `guvenlik.py` dosyasında e-posta gönderecek ve alacak adresleri kendi bilgilerinizle güncelleyin.
 Update the email credentials in `guvenlik.py`.
@@ -73,7 +88,25 @@ EMAIL_PASSWORD = 'UYGULAMA_SIFRENIZ'  # Google "Uygulama Şifresi" kullanın
 TO_EMAIL = 'uyari_gonderilecek_adres@gmail.com'
 ```
 
+
 ### Çalıştırma / Running
+=======
+### Kamerayı Kendi Kaynağınıza Bağlama
+
+`guvenlik.py` dosyasında kamera görüntüsü `cv2.VideoCapture()` fonksiyonu
+kullanılarak açılır. Varsayılan olarak yerel bilgisayarınızdaki kamera
+`cv2.VideoCapture(0)` ile seçilmiştir. Kendi IP kameranızın adresini ya da
+farklı bir kamera ID'si kullanmak için bu satırı şu şekilde güncelleyebilirsiniz:
+
+```python
+cap = cv2.VideoCapture("<KAMERA_URL_VEYA_ID>")
+```
+
+Örneğin bir IP kamera için `cv2.VideoCapture("rtsp://<adres>")` ya da ikinci
+USB kamera için `cv2.VideoCapture(1)` yazabilirsiniz.
+
+### Çalıştırma
+
 
 ```bash
 python guvenlik.py
