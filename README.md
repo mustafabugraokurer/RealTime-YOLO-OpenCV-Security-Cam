@@ -42,7 +42,8 @@
     * Bir alarm sesini `Tehlike Alarm Sesi.mp3` olarak ana dizine ekleyin.
     * Tanınmasını istediğiniz kişilerin fotoğraflarını (`isim.jpg` formatında) `known_faces` adında bir klasör oluşturup içine ekleyin.
 
-3.  **Gerekli Kütüphaneleri Yükleyin:**
+3.  **Gerekli Kütüphaneleri Yükleyin:** Projenin kök dizinindeki
+   `requirements.txt` dosyasında listelenen bağımlılıkları yüklemek için:
     ```bash
     pip install -r requirements.txt
     ```
