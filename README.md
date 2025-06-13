@@ -29,7 +29,7 @@ Bu çalışmanın temel amacı, YOLO nesne tanıma algoritması ve OpenCV görü
 - **Kullanıcı Dostu Arayüz**: `Tkinter` ile oluşturulmuş, kullanımı kolay bir arayüz.
 - **Detaylı Olay Kaydı (Log)**: Tespit edilen her olayın zaman damgasıyla birlikte arayüzdeki log ekranına yazdırılması.
 
-*Features (English):*
+*Features :*
 - **Real-Time Video Feed** displayed in the interface.
 - **Restricted Area Selection** drawn with the mouse.
 - **High-Performance Detection** of people using `YOLOv8`.
